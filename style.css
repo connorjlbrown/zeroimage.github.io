@@ -1,0 +1,258 @@
+    *{
+      --color-1: #ffffee;
+      --color-2: black;
+      --color-3: rgba(236, 198, 48, 0.4);
+
+      --track: #ffffee;
+      --thumb: black;
+      scrollbar-color: var(--thumb) var(--track);
+
+    }
+
+    html {
+      padding: 0px;
+      margin: 0px;
+      border-width: 0px;
+      overflow-x: hidden;
+      font-size: 1.1rem;
+
+      font-family: 'sans';
+
+    }
+
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-1);
+}
+    header{
+	    text-align: center;
+    }
+nav {
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+    .flex-container{
+	display: flex;
+	  align-items: flex-start; /* Align items to the top */
+	  flex-direction: row-reverse;
+	  justify-content: center; /* Align the links and blurbs side-by-side */
+	  gap: 20px; /* Add spacing between the links and blurbs */
+	  margin: 20px auto; /* Center the container in the document */
+	  width: 80%; /* Adjust width as needed for responsiveness */
+    }
+    .grid-container{
+	    display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    align-items: center;
+	    gap: 20px;
+	    max-width 1200px;
+	    box-sizing: border-box;
+	    padding: 10px;
+	    margin: 20px auto;
+    }
+
+.flex-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+iframe{
+	width: 100%;
+	height: 300px;
+}
+
+.flex-header{
+	justify-content: center;
+	display: flex;
+	padding-top:25px;
+}
+.flex-item{
+	margin: 0 15px;
+	display: inline-flex;
+	align-items: center;
+}
+.flex-image{
+	margin-left: auto;
+	display: flex;
+	max-height: 30vh;
+	padding: 10px 10px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.links-list{
+	flex: 1; 
+	max-width: 200px; 
+	margin: 0 auto;
+}
+.text-body{
+	align-content: center;
+	max-width: 50vw;
+	padding: 10px;
+}
+.left-text{
+	align-content: left;
+	max-width: 50vw;
+	padding: 10px;
+}
+#blurbs {
+  flex: 3; /* Allow blurbs to take up more space */
+  max-width: 30vw; /* prevent interaction with link list */
+  margin-right: auto;
+  text-align: left;
+  padding: 10px;
+}
+
+.music-box{
+	align-content: right;
+	max-width: 30vw;
+	padding 10px;
+}
+
+.blurb {
+  display: none; /* Hidden by default */
+  padding: 10px;
+  border: 1px solid var(--color-2); /* Optional: Add styling */
+  background-color: var(--color-1); /* Match your site's theme */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lnk:hover + .blurb {
+  display: block; /* Show the blurb when the link is hovered */
+}
+
+
+    div {
+      margin-inline-start: 0px;
+      padding-inline-start: 0px;
+      position: relative;
+      justify-content: center;
+    }
+
+    ul {
+      width: auto;
+      height: auto;
+      position: fixed;
+      border-right: var(--color-2);
+      border-right-width: 20px;
+      left: 45%;
+      top: 20%;
+
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 15px;
+      margin-inline-end: 0px;
+
+      padding-inline-start: 20px;
+      padding-inline-end: 10%;
+
+      text-align: right;
+
+      margin-bottom: auto;
+    }
+
+    ul li {
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+      text-align-last: left;
+      width: fit-content;
+      list-style: "- ";
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color-2)
+    }
+
+    a:hover {
+      background-color: var(--color-2);
+      color: var(--color-1);
+    }
+
+    /* a:visited { text-decoration: none; } */
+
+    .contacts {
+      bottom: 0px;
+
+      display: block;
+      margin-left: 5px;
+
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+      margin-left: 0em;
+      margin-bottom: 5px;
+    }
+
+    pre {
+      font-size: 8px;
+      line-height: 1.0;
+    }
+
+    .pdf {
+      text-decoration: underline;
+    }
+
+
+    /* TODO: add custom/more interesting styling for each individual blurb */
+
+    #this_site_blurb {
+      display: none;
+    }
+
+    #github_blurb {
+      display: none;
+    }
+
+    #linkedin_blurb {
+      display: none;
+      width: auto;
+    }
+
+    #soundcloud_blurb {
+      display: none;
+    }
+
+    #youtube_blurb {
+      display: none;
+    }
+
+    #matrix_blurb {
+      display: none;
+    }
+
+    #instagram_blurb {
+	    display: none;
+    }
+    #twitter_blurb {
+	    display: none;
+    }
+    #mastodon_blurb {
+	    display: none;
+    }
+
+
+    #scrot_viewer_blurb {
+      display: none;
+    }
+
+

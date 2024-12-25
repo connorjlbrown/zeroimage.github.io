@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"> <meta content="utf-8" http-equiv="encoding">
+
+
+<html>
+
+<head>
+  <link rel="icon" type="image/png" href="images/pfp.png"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>links</title>
+
+</head>
+
+<body>
+	<header>
+		<nav class="flex-nav">
+			<a class='flex-item' href="index.html">main </a>
+			<a class='flex-item' href="links.html">links </a>
+			<a class='flex-item' href="blog.html">blog </a>
+			<a class='flex-item' href="about.html">about </a>
+			<a class='flex-item' href="music.html">music </a>
+		</nav>
+	</header>
+  <div class="flex-container">
+    <ul class="links-list box-item">
+      <li><a class="lnk" id="this_site" target="" rel="noopener noreferrer" href=".">here</a></li>
+      <br>
+      <div class="divider"> cv </div>
+      ---
+      <li><a class="lnk pdf" id="resume" target="_blank" rel="noopener noreferrer" href="resume.pdf">resume.pdf</a></li>
+      <li><a class="lnk" id="github" target="_blank" rel="noopener noreferrer" href="https://github.com/connorjlbrown">github</a></li>
+      <li><a class="lnk" id="linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/connor-brown-215808256/">linkedin</a></li>
+      ---
+      <div class="divider">music</div>
+      ---
+      <li><a class="lnk" id="bandcamp" target="_blank" rel="noopener noreferrer" href="https://zeroimage.bandcamp.com">bandcamp</a></li>
+      <li><a class="lnk" id="soundcloud" target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/zero_image">soundcloud</a></li>
+      ---
+      <div class="divider">etc</div>
+      ---
+      <li><a class="lnk" id="youtube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCaoJycLc7IWFMdda2Al9Vww">youtube</a></li>
+      <li><a class="lnk" id="instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/3rdwrldbathhaus/">instagram</a></li>
+
+    </ul>
+
+    <br>
+
+  </div>
+  <div id="blurbs">
+    <div class="blurb" id="this_site_blurb">
+      here
+      <br>
+      ---
+      <br>
+      I stole the layout for this linktree section (including the code that makes these blurbs pop up when you hover over them) from Will Rinkoff at dsm0.github.io.
+    </div>
+    <div class="blurb" id="resume_blurb">
+      my resume
+    </div>
+    <div class="blurb" id="github_blurb">
+      my github page
+      <br>
+      ---
+      <br>
+      there's not a whole lot of interest on there at the moment but it's good to keep track of.
+    </div>
+    <div class="blurb" id="linkedin_blurb">
+      <div id="blurb_text">
+        my linkedin page
+      <br>
+      ---
+      <br>
+      	hello potential employers and colleagues welcome have a seat make yourselves comfortable
+      </div>
+
+    </div>
+    <div class="blurb" id="bandcamp_blurb">
+      This is where I'll post most music from here on out.
+    </div>
+    <div class="blurb" id="soundcloud_blurb">
+	    There's some older and rougher tracks on here that I decided not to migrate over to Bandcamp.
+    </div>
+    <div class="blurb" id="youtube_blurb">
+	    my youtube is a shitpost dumping ground so proceed at your own risk.
+    </div>
+
+    <div class="blurb" id="instagram_blurb">
+      my instagram.
+    </div>
+    <div class="blurb" id="mastodon_blurb">
+      my mastodon.
+      <br>
+      ---
+      <br>
+      this platform is objectively better than twitter but i post almost never on here because the whole platform is suffering from Metcalfe's law at the moment. i'm hoping this one beats out the competing twitter clones like threads and bluesky because it does all the same stuff and does a good job of keeping bad stuff out.
+    </div>
+    </div>
+  </div>
+
+  <script>
+	const lnks = [...document.getElementsByClassName("lnk")];
+	const blurbs = [...document.getElementsByClassName("blurb")];
+
+	lnks.forEach((element, i) => {
+	  element.addEventListener("mouseover", () => {
+	    blurbs[i].style.display = "block";
+	  });
+	  element.addEventListener("mouseleave", () => {
+	    blurbs[i].style.display = "none";
+	  });
+	});
+</script>
+</body>
+
+</html>
