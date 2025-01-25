@@ -249,6 +249,9 @@ iframe{
     #mastodon_blurb {
 	    display: none;
     }
+    #pixelfed_blurb {
+	    display: none;
+    }
 
 
     #scrot_viewer_blurb {
